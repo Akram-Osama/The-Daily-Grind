@@ -15,3 +15,81 @@ body {
   background-position: center;   /* Centers the image */
   background-repeat: no-repeat;  /* Prevents tiling */
 }
+
+header {
+  padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-nav {
+
+    /* يخلي الـnav على قد المحتوى فقط */
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 7px;
+
+    /* الزجاج */
+    background: rgba(255, 255, 255, 0.15);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    /* شكل بيضاوي */
+    border-radius: 999px;
+
+    /* Glass Effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================
+   Nav Links
+========================= */
+
+.nav-link {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+.nav-link:hover {
+
+    background-color: #222;
+
+    color: #fff;
+
+    transform: translateY(-1px);
+
+}
+
