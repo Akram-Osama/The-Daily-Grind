@@ -1,95 +1,90 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 body {
   background-image: url("../public/images/Gemini_Generated_Image_oztpbloztpbloztp.jfif");
-  background-size: cover;        /* Ensures full coverage */
-  background-position: center;   /* Centers the image */
-  background-repeat: no-repeat;  /* Prevents tiling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 header {
   padding-top: 20px;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .glass-nav {
+  display: inline-flex;
 
-    /* يخلي الـnav على قد المحتوى فقط */
-    display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    align-items: center;
-    justify-content: center;
+  gap: 6px;
 
-    gap: 6px;
+  padding: 7px;
 
-    padding: 7px;
+  background: rgba(255, 255, 255, 0.15);
 
-    /* الزجاج */
-    background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
-    border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 
-    /* شكل بيضاوي */
-    border-radius: 999px;
-
-    /* Glass Effect */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    box-shadow:
-        0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08);
 
 }
 
 
 /* =========================
-   Nav Links
+  Nav Links
 ========================= */
 
 .nav-link {
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-    padding: 10px 20px;
+  padding: 10px 20px;
 
-    border-radius: 999px;
+  border-radius: 999px;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    color: #222;
+  color: #222;
 
-    font-size: 15px;
-    font-weight: 600;
+  font-size: 15px;
+  font-weight: 600;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 
 }
 
 .nav-link:hover {
 
-    background-color: #222;
+  background-color: #222;
 
-    color: #fff;
+  color: #fff;
 
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 
 }
-
