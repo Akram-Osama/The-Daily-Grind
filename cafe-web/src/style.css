@@ -19,7 +19,7 @@ body {
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
-  background-image: url("../public/images/bkg.jfif");
+  background-image: url("../public/images/bkg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
