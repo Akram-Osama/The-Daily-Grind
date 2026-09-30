@@ -298,7 +298,7 @@ header {
 .footer-social {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .footer-info h2,
@@ -531,6 +531,10 @@ header {
   .footer-info,
   .footer-social {
     align-items: flex-start;
+  }
+
+  .footer-social {
+    align-items: center;
   }
 
   .footer-brand img {
