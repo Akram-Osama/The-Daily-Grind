@@ -6,11 +6,18 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
 }
 
 body {
+  background: #2d211b;
+  color: #f5ead9;
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
   background-image: url("../public/images/bkg.jfif");
   background-size: cover;
   background-position: center;
@@ -38,7 +45,7 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.25);
 
   border-radius: 999px;
-  
+
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
 
@@ -87,4 +94,119 @@ header {
 
   transform: translateY(-1px);
 
+}
+
+.best-sellers {
+  min-height: 65vh;
+  padding: 72px 24px 88px;
+  background: #2d211b;
+}
+
+.best-sellers h2 {
+  margin: 0 0 42px;
+  color: #f5ead9;
+  font-size: 32px;
+  text-align: center;
+}
+
+.desserts {
+  padding-top: 103px;
+  padding-bottom: 1px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+.card {
+  overflow: hidden;
+  padding: 0 0 24px;
+  border: 1px solid #a47655;
+  border-radius: 6px;
+  background: #49362a;
+  color: #eadcc8;
+  box-shadow: 0 8px 20px rgba(13, 8, 5, 0.2);
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 350ms ease;
+}
+
+.card h3,
+.card p {
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.card h3 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+  color: #fff3df;
+  font-size: 21px;
+}
+
+.card p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.card .price {
+  margin-top: 18px;
+  color: #e1b879;
+  font-weight: 700;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-7px);
+    border-color: #d1a36a;
+    box-shadow: 0 18px 32px rgba(13, 8, 5, 0.32);
+  }
+
+  .card:hover img {
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .card img {
+    transition: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .best-sellers {
+    padding: 56px 18px 64px;
+  }
+
+  .cards {
+    grid-template-columns: unset;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(250px, 82vw);
+    max-width: none;
+    overflow-x: auto;
+    padding: 0 4px 14px;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+  }
+
+  .card {
+    scroll-snap-align: start;
+  }
+
+  .card img {
+    height: 220px;
+  }
 }
