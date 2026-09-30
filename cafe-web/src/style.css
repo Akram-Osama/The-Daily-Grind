@@ -221,6 +221,32 @@ header {
   padding-bottom: 1px;
 }
 
+.full-menu-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.full-menu-button {
+  min-height: 40px;
+  padding: 0 22px;
+  border: 1px solid #d1a36a;
+  border-radius: 4px;
+  background: transparent;
+  color: #f5ead9;
+  cursor: pointer;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.full-menu-button:hover,
+.full-menu-button:focus-visible {
+  background: #d1a36a;
+  color: #2d211b;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
