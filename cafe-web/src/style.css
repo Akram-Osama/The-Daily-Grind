@@ -32,6 +32,7 @@ body {
   left: clamp(24px, 8vw, 120px);
   width: min(520px, calc(100% - 48px));
   transform: translateY(-50%);
+  text-align: left;
 }
 
 .hero-content h1 {
