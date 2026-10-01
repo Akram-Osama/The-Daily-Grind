@@ -117,7 +117,8 @@ header {
 
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
 
   background-color: #222;
 
@@ -526,12 +527,22 @@ header {
   }
 
   .footer-content {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 32px 24px;
   }
 
   .footer-brand {
-    grid-column: 1 / -1;
+    grid-column: auto;
+    align-items: center;
+  }
+
+  .footer-brand p {
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-social {
+    align-items: center;
   }
 
   .cards {
@@ -566,15 +577,6 @@ header {
 
   .footer-brand {
     grid-column: auto;
-  }
-
-  .footer-info,
-  .footer-social {
-    align-items: flex-start;
-  }
-
-  .footer-social {
-    align-items: center;
   }
 
   .footer-brand img {
