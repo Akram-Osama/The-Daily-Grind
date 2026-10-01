@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | The Daily Grind</title>
+
+    <link rel="stylesheet" href="../style/contact.css">
+</head>
+
+<body>
+
+    <!-- =========================
+        NAVBAR
+    ========================= -->
+
+    <header class="contact-header">
+
+        <nav class="glass-nav">
+
+            <a href="../../index.html" class="nav-link">
+                Home
+            </a>
+
+            <a href="./menu.html" class="nav-link">
+                Menu
+            </a>
+
+            <a href="#" class="nav-link active" aria-current="page">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+        HERO
+    ========================= -->
+
+    <section class="contact-hero">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                GET IN TOUCH
+            </p>
+
+            <h1>
+                We'd love to
+                <span>hear from you.</span>
+            </h1>
+
+            <p class="hero-description">
+                Whether you have a question, want to say hello,
+                or simply want to know more about us — we're here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        CONTACT INFO
+    ========================= -->
+
+    <section class="contact-info-section">
+
+        <div class="section-heading">
+
+            <p class="section-number">
+                01
+            </p>
+
+            <div>
+                <h2>Come say hello.</h2>
+
+                <p>
+                    Find us, call us, or simply drop by for a cup.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+            <!-- LOCATION -->
+
+            <article class="info-card">
+
+                <div class="info-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+
+                </div>
+
+                <p class="info-label">
+                    VISIT US
+                </p>
+
+                <h3>
+                    Your address,
+                    <span>City</span>
+                </h3>
+
+                <a href="#location" class="info-link">
+                    View on map →
+                </a>
+
+            </article>
+
+
+            <!-- HOURS -->
+
+            <article class="info-card">
+
+                <div class="info-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" />
+                    </svg>
+
+                </div>
+
+                <p class="info-label">
+                    OPENING HOURS
+                </p>
+
+                <h3>
+                    Every day
+                </h3>
+
+                <p class="info-detail">
+                    8:00 AM — 10:00 PM
+                </p>
+
+            </article>
+
+
+            <!-- CONTACT -->
+
+            <article class="info-card">
+
+                <div class="info-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8A2.5 2.5 0 0 1 17.5 16H12l-4.5 4v-4h-1A2.5 2.5 0 0 1 4 13.5v-8Z" />
+                    </svg>
+
+                </div>
+
+                <p class="info-label">
+                    CONTACT
+                </p>
+
+                <h3>
+                    +20 100 000 0000
+                </h3>
+
+                <a href="mailto:hello@thedailygrind.com" class="info-link">
+                    hello@thedailygrind.com
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        MESSAGE + LOCATION
+    ========================= -->
+
+    <section class="contact-main">
+
+        <div class="contact-main-grid">
+
+
+            <!-- =========================
+                FORM
+            ========================= -->
+
+            <div class="form-wrapper">
+
+                <div class="form-heading">
+
+                    <p class="section-number">
+                        02
+                    </p>
+
+                    <h2>
+                        Send us a
+                        <span>message.</span>
+                    </h2>
+
+                    <p>
+                        Have something on your mind?
+                        We'd be happy to hear from you.
+                    </p>
+
+                </div>
+
+
+                <form id="contactForm" novalidate>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                autocomplete="name"
+                                required
+                            >
+
+                            <small class="error-message"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <small class="error-message"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="What is it about?"
+                            required
+                        >
+
+                        <small class="error-message"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell us what's on your mind..."
+                            required
+                        ></textarea>
+
+                        <small class="error-message"></small>
+
+                    </div>
+
+
+                    <button type="submit" class="send-button">
+
+                        <span class="button-text">
+                            Send Message
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <p class="form-status" id="formStatus"></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                LOCATION
+            ========================= -->
+
+            <div class="location-wrapper" id="location">
+
+                <div class="location-card">
+
+                    <div class="location-top">
+
+                        <p class="section-number">
+                            03
+                        </p>
+
+                        <div>
+                            <p class="location-label">
+                                FIND US
+                            </p>
+
+                            <h2>
+                                Your next
+                                <span>coffee stop.</span>
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="map-placeholder">
+
+                        <div class="map-pattern">
+
+                            <div class="map-road road-one"></div>
+                            <div class="map-road road-two"></div>
+                            <div class="map-road road-three"></div>
+
+                            <div class="location-pin">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                                    <circle cx="12" cy="10" r="2.5" />
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <span class="map-label">
+                            THE DAILY GRIND
+                        </span>
+
+                    </div>
+
+
+                    <div class="location-address">
+
+                        <div>
+
+                            <p>
+                                Your address, City
+                            </p>
+
+                            <span>
+                                Egypt
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="#"
+                            class="directions-button"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Get Directions
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        SOCIAL
+    ========================= -->
+
+    <section class="social-section">
+
+        <p class="section-number">
+            04
+        </p>
+
+        <h2>
+            Follow along with
+            <span>the daily grind.</span>
+        </h2>
+
+        <p class="social-description">
+            Coffee, quiet moments, and everything in between.
+        </p>
+
+
+        <div class="social-links">
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+            >
+                Instagram
+                <span>↗</span>
+            </a>
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+            >
+                Facebook
+                <span>↗</span>
+            </a>
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+            >
+                TikTok
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        FOOTER
+    ========================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <img
+                    src="../../public/images/logo-removebg-preview.png"
+                    alt="The Daily Grind logo"
+                >
+
+                <p>
+                    A place made for coffee,
+                    comfort, and good moments.
+                </p>
+
+            </div>
+
+
+            <div class="footer-info">
+
+                <h2>
+                    Visit Us
+                </h2>
+
+                <div class="footer-detail">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                    </svg>
+
+                    <p>
+                        Your address, City
+                    </p>
+
+                </div>
+
+                <div class="footer-detail">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" />
+                    </svg>
+
+                    <p>
+                        Every day<br>
+                        8:00 AM - 10:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-social">
+
+                <h2>
+                    Follow Along
+                </h2>
+
+                <div class="social-links footer-social-links">
+
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle class="social-dot" cx="17.5" cy="6.5" r="1" />
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.6V3.9c-.3-.05-1.4-.1-2.6-.1-2.5 0-4.2 1.5-4.2 4.3V10H7v3h2.9v8h3.6Z" />
+                        </svg>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 3v11.2a4.2 4.2 0 1 1-3.5-4.1v3.2a1.2 1.2 0 1 0 .5 1V3h3c.2 2.4 1.5 4 4 4.4v3.1A8 8 0 0 1 14 8.8" />
+                        </svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 The Daily Grind. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../main.js"></script>
+
+</body>
+
+</html>
