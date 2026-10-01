@@ -50,7 +50,7 @@ body {
   max-width: 440px;
   color: #000000;
   margin-top: 18px;
-  font-size: clamp(25px, 3vw, 21px);
+  font-size: clamp(16px, 2.3vw, 21px);
   line-height: 1.6;
   font-weight: 700;
 }
@@ -489,14 +489,56 @@ header {
   }
 }
 
-@media (max-width: 700px) {
+@media (min-width: 701px) and (max-width: 1024px) {
+  .hero {
+    min-height: 88vh;
+    min-height: 88svh;
+    background-attachment: scroll;
+    background-position: left center;
+  }
+
   .hero-content {
-    left: 24px;
-    width: calc(100% - 48px);
+    left: clamp(32px, 7vw, 72px);
+    width: min(440px, calc(100% - 64px));
   }
 
   .hero-content h1 {
-    font-size: clamp(38px, 10vw, 58px);
+    font-size: clamp(46px, 6vw, 62px);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    background-attachment: scroll;
+    background-position: left center;
+  }
+
+  .hero-content {
+    left: 24px;
+    top: 40%;
+    width: min(370px, calc(100% - 48px));
+  }
+
+  .hero-content h1 {
+    font-size: clamp(36px, 9vw, 52px);
+  }
+
+  .hero-content p {
+    max-width: 320px;
+    margin-top: 14px;
+    font-size: clamp(16px, 4.5vw, 19px);
+    line-height: 1.45;
+  }
+
+  header {
+    padding-top: 16px;
+  }
+
+  .nav-link {
+    padding: 9px 16px;
+    font-size: 14px;
   }
 
   .what {
