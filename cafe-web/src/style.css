@@ -53,12 +53,38 @@ body {
 
 .hero-content p {
   max-width: 440px;
+  white-space: nowrap;
   color: #000000;
   margin-top: 18px;
   font-size: clamp(16px, 2.3vw, 21px);
   line-height: 1.6;
   font-weight: 700;
   animation: hero-content-enter 700ms 120ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: 24px;
+  padding: 0 24px;
+  border: 1px solid #501e07;
+  border-radius: 4px;
+  background: #501e07;
+  color: #f5ead9;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  transform: translateY(-2px);
+  border-color: #d1a36a;
+  background: #d1a36a;
+  color: #2d211b;
 }
 
 header {
@@ -509,6 +535,7 @@ header {
   .glass-nav,
   .nav-link,
   .full-menu-button,
+  .hero-cta,
   .social-links a,
   .card,
   .card img,
@@ -557,9 +584,9 @@ header {
   }
 
   .hero-content p {
-    max-width: 320px;
+    max-width: none;
     margin-top: 14px;
-    font-size: clamp(16px, 4.5vw, 19px);
+    font-size: clamp(12px, calc((100vw - 48px) / 21), 18px);
     line-height: 1.45;
   }
 
