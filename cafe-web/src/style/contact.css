@@ -1154,7 +1154,10 @@ form {
     }
 
     .hero-description {
-        font-size: 15px;
+        max-width: 36ch;
+        margin-inline: auto;
+        font-size: 16px;
+        line-height: 1.65;
     }
 
     .contact-info-section,
@@ -1169,6 +1172,11 @@ form {
         gap: 12px;
 
         text-align: center;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.1;
     }
 
     .info-grid {
@@ -1222,6 +1230,11 @@ form {
         margin-left: auto;
     }
 
+    .form-heading h2 {
+        font-size: clamp(32px, 9vw, 38px);
+        line-height: 1.1;
+    }
+
     .send-button {
         justify-content: center;
         gap: 12px;
@@ -1233,6 +1246,11 @@ form {
 
     .location-top > div {
         text-align: center;
+    }
+
+    .location-top h2 {
+        font-size: clamp(26px, 8vw, 34px);
+        line-height: 1.1;
     }
 
     .map-placeholder {
@@ -1305,16 +1323,8 @@ form {
         font-size: 20px;
     }
 
-    .form-heading h2 {
-        font-size: 38px;
-    }
-
     .location-top {
         gap: 12px;
-    }
-
-    .location-top h2 {
-        font-size: 30px;
     }
 
     .map-placeholder {
@@ -1322,7 +1332,8 @@ form {
     }
 
     .social-section h2 {
-        font-size: 40px;
+        font-size: clamp(32px, 9vw, 40px);
+        line-height: 1.08;
     }
 
     .footer-social-links {

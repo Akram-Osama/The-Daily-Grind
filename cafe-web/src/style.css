@@ -584,10 +584,11 @@ header {
   }
 
   .hero-content p {
-    max-width: none;
+    max-width: 320px;
     margin-top: 14px;
-    font-size: clamp(12px, calc((100vw - 48px) / 21), 18px);
-    line-height: 1.45;
+    font-size: clamp(15px, 4.5vw, 17px);
+    line-height: 1.55;
+    white-space: normal;
   }
 
   header {
@@ -604,7 +605,7 @@ header {
   }
 
   .what h2 {
-    font-size: 25px;
+    font-size: clamp(20px, 7.2vw, 25px);
     white-space: nowrap;
   }
 
@@ -716,7 +717,7 @@ header {
   }
 
   .what-card p {
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 15px;
+    line-height: 1.6;
   }
 }
