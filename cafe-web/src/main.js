@@ -16,6 +16,40 @@ function setActiveCategory(sectionId) {
 	}
 }
 
+/* Subtle, one-time reveals as page content enters the viewport. */
+if (
+	'IntersectionObserver' in window &&
+	!window.matchMedia('(prefers-reduced-motion: reduce)').matches
+) {
+	const revealTargets = document.querySelectorAll(
+		'.what h2, .what-card, .best-sellers h2, .card, .full-menu-wrap, .footer-content > *, .footer-bottom, ' +
+		'.menu-hero-content, .category-nav, .section-title, .menu-item, .menu-cta > *, .menu-footer > *, ' +
+		'.hero-content, .section-heading, .info-card, .form-wrapper, .location-card, .social-section > *',
+	);
+
+	if (revealTargets.length) {
+		revealTargets.forEach((element, index) => {
+			element.classList.add('reveal-on-scroll');
+			element.style.setProperty('--reveal-delay', `${(index % 3) * 70}ms`);
+		});
+		document.documentElement.classList.add('motion-ready');
+
+		const revealObserver = new IntersectionObserver(
+			(entries, observer) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('is-visible');
+						observer.unobserve(entry.target);
+					}
+				}
+			},
+			{ threshold: 0.12, rootMargin: '0px 0px -32px 0px' },
+		);
+
+		revealTargets.forEach((element) => revealObserver.observe(element));
+	}
+}
+
 for (const link of categoryLinks) {
 	link.addEventListener('click', () => {
 		setActiveCategory(link.getAttribute('href').slice(1));

@@ -1,0 +1,9 @@
+{
+  "name": "the-daily-grind",
+  "private": true,
+  "scripts": {
+    "dev": "cd cafe-web && npm run dev --",
+    "build": "cd cafe-web && npm run build --",
+    "preview": "cd cafe-web && npm run preview --"
+  }
+}

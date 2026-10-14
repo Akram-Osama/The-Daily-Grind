@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #2d211b;
   color: #f5ead9;
@@ -33,6 +37,7 @@ body {
   width: min(520px, calc(100% - 48px));
   transform: translateY(-50%);
   text-align: left;
+  animation: hero-content-enter 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 .hero-content h1 {
@@ -53,6 +58,7 @@ body {
   font-size: clamp(16px, 2.3vw, 21px);
   line-height: 1.6;
   font-weight: 700;
+  animation: hero-content-enter 700ms 120ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
 header {
@@ -83,6 +89,32 @@ header {
   box-shadow:
     0 8px 30px rgba(0, 0, 0, 0.08);
 
+  animation: nav-enter 500ms ease-out both;
+
+}
+
+@keyframes hero-content-enter {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes nav-enter {
+  from {
+    opacity: 0;
+    translate: 0 -6px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }
 
 
@@ -160,21 +192,8 @@ header {
   border-radius: 6px;
   background: #fffaf2;
   box-shadow: 0 8px 20px rgba(45, 33, 27, 0.08);
-  animation: what-card-reveal 650ms both;
   transition: background-color 250ms ease, border-color 250ms ease;
   text-align: center;
-}
-
-.what-card:nth-child(2) {
-  animation-delay: 100ms;
-}
-
-.what-card:nth-child(3) {
-  animation-delay: 200ms;
-}
-
-.what-card:nth-child(4) {
-  animation-delay: 300ms;
 }
 
 .what-icon {
@@ -211,16 +230,17 @@ header {
   line-height: 1.7;
 }
 
-@keyframes what-card-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.97);
-  }
 
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+/* Scroll reveals are enabled by main.js after motion preferences are checked. */
+.motion-ready .reveal-on-scroll {
+  opacity: 0;
+  translate: 0 16px;
+  transition: opacity 550ms ease var(--reveal-delay, 0ms), translate 550ms ease var(--reveal-delay, 0ms);
+}
+
+.motion-ready .reveal-on-scroll.is-visible {
+  opacity: 1;
+  translate: 0 0;
 }
 
 @media (hover: hover) {
@@ -480,6 +500,16 @@ header {
 
 @media (prefers-reduced-motion: reduce) {
 
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-content,
+  .hero-content p,
+  .glass-nav,
+  .nav-link,
+  .full-menu-button,
+  .social-links a,
   .card,
   .card img,
   .what-card,
@@ -511,7 +541,7 @@ header {
   .hero {
     min-height: 100vh;
     min-height: 100svh;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: left center;
   }
 
@@ -519,6 +549,7 @@ header {
     left: 24px;
     top: 40%;
     width: min(370px, calc(100% - 48px));
+    text-align: center;
   }
 
   .hero-content h1 {
